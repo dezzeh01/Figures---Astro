@@ -31,17 +31,22 @@
 	font-display: swap;
 }
 body {
-	font-family: 'Atkinson', sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
+  background: linear-gradient(135deg, #1e1e2f, #2d2d44);
+  background-size: 400% 400%;
+  animation: waveBG 20s ease infinite;
+  color: white;
+}
+
+@keyframes waveBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 main {
 	width: 720px;

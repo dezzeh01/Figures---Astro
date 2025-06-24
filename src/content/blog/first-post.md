@@ -26,3 +26,17 @@ Fast forward, quite substantially to 2017, and after a pretty shitty time, I was
 Recently, a company called Planet X released a not entirely legal, modern version of Deszaras, called Ismenios. This is also a great figure. A very faithful update to the original.
 
 Please, enjoy some pictures of these beautiful figures.
+
+<div class="gallery">
+<img src="https://res.cloudinary.com/dsidh7bem/image/upload/v1750768954/IMG_0253_xccxp4.jpg"/>
+<img src="https://res.cloudinary.com/dsidh7bem/image/upload/v1750768952/IMG_0246_k9hiuw.jpg"/>
+<img src="https://res.cloudinary.com/dsidh7bem/image/upload/v1750768952/IMG_0247_tfrpff.jpg"/>
+<img src="https://res.cloudinary.com/dsidh7bem/image/upload/v1750768953/IMG_0250_uhzwbr.jpg"/>
+<img src="https://res.cloudinary.com/dsidh7bem/image/upload/v1750768954/IMG_0254_z6gutr.jpg"/>
+<img src="https://res.cloudinary.com/dsidh7bem/image/upload/v1750768954/IMG_0253_xccxp4.jpg"/>
+<img src="https://res.cloudinary.com/dsidh7bem/image/upload/v1750768954/IMG_0255_wczqzi.jpg"/>
+<img src="https://res.cloudinary.com/dsidh7bem/image/upload/v1750768957/IMG_0266_scp6nm.jpg"/>
+<img src="https://res.cloudinary.com/dsidh7bem/image/upload/v1750768958/IMG_0269_mrt2vb.jpg"/>
+<img src="https://res.cloudinary.com/dsidh7bem/image/upload/v1750768957/IMG_0268_u8q508.jpg"/>
+<img src="https://res.cloudinary.com/dsidh7bem/image/upload/v1750768957/IMG_0267_cdtln5.jpg"/>
+</div>

@@ -5,8 +5,15 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <header>
-<div class="social-links">
-<a href="https://bsky.app/profile/dezzeh.bsky.social" target="_blank" rel="noopener noreferrer">
+	<nav>
+		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<div class="internal-links">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/about">About</HeaderLink>
+		</div>
+		<div class="social-links">
+			<a href="https://bsky.app/profile/dezzeh.bsky.social" target="_blank" rel="noopener noreferrer">
 			<span class="sr-only">Follow me on Bluesky</span>
 			<Icon 
 				name="simple-icons:bluesky" 
@@ -21,8 +28,9 @@ import { Icon } from 'astro-icon/components';
 				class="w-8 h-8 text-sky-500 hover:text-sky-600" 
 				aria-hidden="true" 
 			/>
-		</a>				
-	</div>
+		</a>
+		</div>
+	</nav>
 </header>
 <style>
 	header {

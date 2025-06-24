@@ -27,6 +27,13 @@
 	font-display: swap;
 }
 
+/* Ensure html and body fill viewport height and have no margin/padding */
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
 body {
 	font-family: 'Atkinson', sans-serif;
 	margin: 0;
@@ -38,6 +45,11 @@ body {
 	color: rgb(var(--gray-light));
 	font-size: 20px;
 	line-height: 1.7;
+
+	/* Flexbox for sticky footer */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 main {
@@ -45,6 +57,9 @@ main {
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
+
+	/* Grow main to push footer down */
+	flex-grow: 1;
 }
 
 h1,
@@ -151,14 +166,4 @@ hr {
 }
 
 .sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	white-space: nowrap;
-}
+	border

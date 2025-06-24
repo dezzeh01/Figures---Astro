@@ -5,14 +5,17 @@
  */
 
 :root {
-  --bg-gradient: linear-gradient(135deg, #1e1e2f, #2d2d44);
-}
-
-body {
-  background: var(--bg-gradient);
-  background-size: 400% 400%;
-  animation: waveBG 20s ease infinite;
-  color: white;
+	--accent: #ff0080;         /* Neon pink */
+	--accent-dark: #8a00d4;    /* Deep violet */
+	--black: 10, 10, 20;        /* Dark blue-black */
+	--gray: 85, 85, 110;        /* Desaturated purple-gray */
+	--gray-light: 200, 180, 255;/* Soft neon lavender */
+	--gray-dark: 30, 30, 60;    /* Cool dark tone */
+	--gray-gradient: rgba(var(--gray-light), 50%), #1a0033;
+	--box-shadow:
+		0 2px 6px rgba(var(--gray), 25%),
+		0 8px 24px rgba(var(--gray), 33%),
+		0 16px 32px rgba(var(--gray), 33%);
 }
 
 @font-face {
@@ -30,23 +33,19 @@ body {
 	font-display: swap;
 }
 body {
-  background: linear-gradient(135deg, #1e1e2f, #2d2d44);
-  background-size: 400% 400%;
-  animation: waveBG 20s ease infinite;
-  color: white;
+	font-family: 'Atkinson', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	background: linear-gradient(135deg, #0f0c29, #302b63, #ff0080) no-repeat;
+	background-size: 100% 600px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	color: rgb(var(--gray-light));
+	font-size: 20px;
+	line-height: 1.7;
 }
 
-@keyframes waveBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 main {
 	width: 720px;
 	max-width: calc(100% - 2em);

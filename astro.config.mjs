@@ -8,6 +8,6 @@ import astroIcon from 'astro-icon';
 export default defineConfig({
 	site: 'https://example.com',
 	integrations: [
-		mdx(), sitemap(), astroIcon({ include: {'simple-icons': ['bluesky'],}}),
+		mdx(), sitemap(), astroIcon({ include: {'simple-icons': ['bluesky', 'twitter'],}}),
 	],
 })

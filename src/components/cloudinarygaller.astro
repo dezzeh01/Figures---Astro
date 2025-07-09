@@ -1,0 +1,47 @@
+---
+import { v2 as cloudinary } from 'cloudinary';
+
+const { folder = '', limit = 20 } = Astro.props;
+
+// Configure Cloudinary using env vars
+cloudinary.config({
+  cloud_name: import.meta.env.CLOUDINARY_CLOUD_NAME,
+  api_key: import.meta.env.CLOUDINARY_API_KEY,
+  api_secret: import.meta.env.CLOUDINARY_API_SECRET,
+});
+
+type CloudinaryImage = {
+  public_id: string;
+  secure_url: string;
+  width: number;
+  height: number;
+};
+
+let images: CloudinaryImage[] = [];
+
+try {
+  const res = await cloudinary.search
+    .expression(`folder:${folder}`)
+    .sort_by('public_id', 'asc')
+    .max_results(limit)
+    .execute();
+
+  images = res.resources as CloudinaryImage[];
+} catch (err) {
+  console.error('Cloudinary fetch error:', err);
+}
+---
+
+{images.length > 0 && (
+  <div class="gallery">
+    {images.map((image: CloudinaryImage) => (
+      <img
+        src={image.secure_url}
+        alt={image.public_id}
+        width={image.width}
+        height={image.height}
+        loading="lazy"
+      />
+    ))}
+  </div>
+)}

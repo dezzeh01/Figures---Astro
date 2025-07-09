@@ -1,7 +1,12 @@
 ---
 import { v2 as cloudinary } from 'cloudinary';
 
-const { folder = '', limit = 20 } = Astro.props;
+type Props = {
+  folder?: string;
+  limit?: number;
+};
+
+const { folder = '', limit = 20 } = Astro.props as Props;
 
 // Configure Cloudinary using env vars
 cloudinary.config({
@@ -21,7 +26,7 @@ let images: CloudinaryImage[] = [];
 
 try {
   const res = await cloudinary.search
-    .expression(`folder:${folder}`)
+    .expression(`folder:${folder}/*`) // Add wildcard to include files in the folder
     .sort_by('public_id', 'asc')
     .max_results(limit)
     .execute();
@@ -34,7 +39,7 @@ try {
 
 {images.length > 0 && (
   <div class="gallery">
-    {images.map((image: CloudinaryImage) => (
+    {images.map((image) => (
       <img
         src={image.secure_url}
         alt={image.public_id}
@@ -45,3 +50,4 @@ try {
     ))}
   </div>
 )}
+

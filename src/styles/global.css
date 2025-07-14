@@ -14,24 +14,22 @@
 
 @font-face {
 	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-regular.woff') format('woff');
+	src: url('/src/fonts/atkinson-regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-bold.woff') format('woff');
+	src: url('/src/fonts/atkinson-bold.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
 
-/* Ensure html and body fill viewport height and have no margin/padding */
 html, body {
 	margin: 0;
 	padding: 0;
-	height: 100%;
 }
 
 body {
@@ -53,67 +51,12 @@ body {
 }
 
 main {
-	width: 720px;
+	background: linear-gradient(135deg, #0f0c29, #302b63, #ff0080) no-repeat;
+	width: 1000px;
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
-
-	/* Grow main to push footer down */
 	flex-grow: 1;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: #fdfdff;
-	line-height: 1.2;
-}
-
-h1 {
-	font-size: 3.052em;
-}
-h2 {
-	font-size: 2.441em;
-}
-h3 {
-	font-size: 1.953em;
-}
-h4 {
-	font-size: 1.563em;
-}
-h5 {
-	font-size: 1.25em;
-}
-
-strong,
-b {
-	font-weight: 700;
-}
-
-a {
-	color: var(--accent);
-}
-a:hover {
-	color: var(--accent-dark);
-}
-
-p {
-	margin-bottom: 1em;
-}
-.prose p {
-	margin-bottom: 2em;
-}
-
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
 }
 
 table {
@@ -124,58 +67,6 @@ img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 8px;
-}
-
-code {
-	padding: 2px 5px;
-	background-color: rgba(255, 0, 128, 0.15);
-	color: #ff66c4;
-	border-radius: 2px;
-}
-
-pre {
-	padding: 1.5em;
-	background-color: #1a0033;
-	color: #ffe6ff;
-	border-radius: 8px;
-}
-pre > code {
-	all: unset;
-}
-
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0px;
-	font-size: 1.333em;
-	color: #e2baff;
-}
-
-hr {
-	border: none;
-	border-top: 1px solid rgba(var(--gray-light), 0.3);
-}
-
-@media (max-width: 720px) {
-	body {
-		font-size: 18px;
-	}
-	main {
-		padding: 1em;
-	}
-}
-
-.sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	white-space: nowrap;
 }
 
 .gallery {

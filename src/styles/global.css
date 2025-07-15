@@ -57,6 +57,7 @@ main {
 	margin: auto;
 	padding: 3em 1em;
 	flex-grow: 1;
+	color: rgb(var(--gray-light));
 }
 
 table {
